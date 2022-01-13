@@ -1,0 +1,20 @@
+﻿@model lab2.Models.FormModel
+@{
+    ViewData["Title"] = "FormResult";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    Imię:
+    @Html.DisplayFor(model => model.Name)
+    <br />
+    Data urodzenia:  
+    @Html.DisplayFor(model => model.Date)
+    <br />
+    @(Model.LeapYear ? "Jest to rok przestępny" : "Nie jest to rok przestępny")
+    <br />
+    Od dnia urodzenia minęło:
+    @Html.DisplayFor(model => model.DaysSinceBirth) Dni
+    <br />
+
+</div>
